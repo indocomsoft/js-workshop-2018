@@ -1,0 +1,10 @@
+\frametitle{Listeners on multiple elements}
+	\begin{itemize}
+		\item We can do so using \mintinline{Javascript}{document.querySelectorAll}\footnotemark and \mintinline{Javascript}{Array.forEach}\footnotemark\pause
+		\begin{minted}{Javascript}
+let keys = document.querySelectorAll('.key');
+keys.forEach(key => key.addEventListener('transitionend', event => { event.target.classList.remove('playing'); }));
+		\end{minted}
+	\end{itemize}
+	\footnotetext[6]{\url{https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll}}
+	\footnotetext[7]{\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach}}
